@@ -8,9 +8,9 @@ General Information
 
 GET HEAD POST PUT
 
-Locations/routes
+cities/routes
 Jeepneys/drivers/id/name
-Jeepneys/drivers/id→
+Jeepneys/drivers/id
 Jeepneys/drivers/name
 
 routes = {
@@ -51,12 +51,12 @@ ENDPOINTS:
 
 COLLECTION - /api
 
-COLLECTION - /api/locations
-RESOURCE   - /api/locations/1
-COLLECTION - /api/locations/1/routes
-RESOURCE   - /api/locations/1/routes/1
-COLLECTION - /api/locations/1/routes/1/jeepneys 
-RESOURCE   - /api/locations/1/routes/1/jeepneys/1
+COLLECTION - /api/cities
+RESOURCE   - /api/cities/1
+COLLECTION - /api/cities/1/routes
+RESOURCE   - /api/cities/1/routes/1
+COLLECTION - /api/cities/1/routes/1/jeepneys 
+RESOURCE   - /api/cities/1/routes/1/jeepneys/1
 
 COLLECTION - /api/jeepneys
 RESOURCES  - /api/jeepneys/1
@@ -85,7 +85,7 @@ JSONs:
 /api
 
 
-/api/locations - 
+/api/cities - 
     {
         "id": 1,
         "name": "Lucena",
@@ -94,6 +94,7 @@ JSONs:
                 "id": 1,
                 "name": "Lucena City Proper - Site",
                 "distance": 4,
+                "city": "/api/cities/1",
                 "fare": [
                     {
                         "type": "Full",
@@ -135,11 +136,12 @@ JSONs:
         ]
     }
 
-/api/locations/1/routes
+/api/cities/1/routes
     {
         "id": 1,
         "name": "Lucena City Proper - Site",
         "distance": 4,
+        
         "fare" : [
             {
                 "type": "Full",
@@ -178,14 +180,14 @@ JSONs:
         ]       
     }
     
-/api/locations/1/routes/1/jeepneys -> list of redirect to api/jeepneys
+/api/cities/1/routes/1/jeepneys -> list of redirect to api/jeepneys
 [
     "",
 ]
 GET - application/json?
 PATCH - application/json
 
-/api/locations/1/routes/1/jeepneys/1 -> redirect to api/jeepneys
+/api/cities/1/routes/1/jeepneys/1 -> redirect to api/jeepneys
 GET - text/plain
 DELETE
 
@@ -199,7 +201,7 @@ DELETE
     {
         "id": 1,
         "driver": api/users/drivers/1
-        "route": "/api/locations/1/routes/1",
+        "route": "/api/cities/1/routes/1",
         "plate-number": "OWO-UWU",
         "date-registered": "",
         "type": "traditional",

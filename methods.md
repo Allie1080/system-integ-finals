@@ -1,12 +1,12 @@
+# GET
 
+## GET - /api
 
-# GET - /api
-
-> ## Content-types: 
+> ### Content-types: 
 - *application/json*
 - *application/xml*
 
-> ## Responses: 
+> ### Responses: 
 - 200 - SUCCESSFUL RESPONSE
     - *JSON*
 

@@ -1,53 +1,56 @@
 {
-    "cities": {
-        "id": 1,
-        "name": "Lucena",
-        "routes": [
-            {
-                "id": 1,
-                "name": "Lucena City Proper - Site",
-                "city": "/api/cities/1",
-                "distance": 4,
-                "fare": [
-                    {
-                        "type": "Full",
-                        "amount": 13
-                    },
-                    {
-                        "type": "Discounted",
-                        "amount": 11
-                    }
-                ],
-                "operating-hours": [
-                    530,
-                    2100
-                ],
-                "time": 30,
-                "terminals": [
-                    "Enverga University, Gate 3",
-                    "C.M Recto St."
-                ],
-                "landmarks": [
-                    "Moscow St",
-                    "Enverga University",
-                    "Enverga Gymnasium",
-                    "Alfamart Ibabang Dupay",
-                    "SM City Lucena",
-                    "Saint Anne General Hospital",
-                    "STI College",
-                    "New Lucena City Public Market"
-                ],
-                "jeepneys": [
-                    "/api/jeepneys/1",
-                    "/api/jeepneys/2",
-                    "/api/jeepneys/3",
-                    "/api/jeepneys/4",
-                    "MORE"
-                ]
-            },
-            "MORE"
-        ]
-    }, 
+    "cities": [
+        {
+            "id": 1,
+            "name": "Lucena",
+            "routes": [
+                {
+                    "id": 1,
+                    "name": "Lucena City Proper - Site",
+                    "city": "/api/cities/1",
+                    "distance": 4,
+                    "fare": [
+                        {
+                            "type": "Full",
+                            "amount": 13
+                        },
+                        {
+                            "type": "Discounted",
+                            "amount": 11
+                        }
+                    ],
+                    "operating-hours": [
+                        530,
+                        2100
+                    ],
+                    "time": 30,
+                    "terminals": [
+                        "Enverga University, Gate 3",
+                        "C.M Recto St."
+                    ],
+                    "landmarks": [
+                        "Moscow St",
+                        "Enverga University",
+                        "Enverga Gymnasium",
+                        "Alfamart Ibabang Dupay",
+                        "SM City Lucena",
+                        "Saint Anne General Hospital",
+                        "STI College",
+                        "New Lucena City Public Market"
+                    ],
+                    "jeepneys": [
+                        "/api/jeepneys/1",
+                        "/api/jeepneys/2",
+                        "/api/jeepneys/3",
+                        "/api/jeepneys/4",
+                        "MORE"
+                    ]
+                },
+                "MORE"
+            ]
+        },
+        "MORE"
+    ],
     "jeepneys": [
         {
             "id": 1,
@@ -59,20 +62,20 @@
             "status": "unavailable",
             "reviews": {
                 "word-cloud": {
-                        "not good": 34,
-                        "very cramped": 12,
-                        "MORE": -1
-                    },
+                    "not good": 34,
+                    "very cramped": 12,
+                    "MORE": -1
+                },
                 "sentences": [
-                        {
-                            "user": "/api/user/passengers/1",
-                            "comment": "api/user/passengers/1/comments/1"
-                        },
-                        {
-                            "user": "/api/user/2",
-                            "comment": "api/user/passengers/2/comments/1"
-                        },
-                        "MORE"
+                    {
+                        "user": "/api/user/passengers/1",
+                        "comment": "api/user/passengers/1/comments/1"
+                    },
+                    {
+                        "user": "/api/user/2",
+                        "comment": "api/user/passengers/2/comments/1"
+                    },
+                    "MORE"
                 ]
             }
         },
@@ -86,26 +89,26 @@
             "status": "available",
             "reviews": {
                 "word-cloud": {
-                        "too cold": 13,
-                        "spacious": 19,
-                        "scary fast": 5,
-                        "MORE": -1
-                    },
+                    "too cold": 13,
+                    "spacious": 19,
+                    "scary fast": 5,
+                    "MORE": -1
+                },
                 "sentences": [
-                        {
-                            "user": "/api/user/passengers/1",
-                            "comment": "api/user/passengers/1/comments/2"
-                        },
-                        {
-                            "user": "/api/user/2",
-                            "comment": "api/user/passengers/2/comments/2"
-                        },
-                        "MORE"
+                    {
+                        "user": "/api/user/passengers/1",
+                        "comment": "api/user/passengers/1/comments/2"
+                    },
+                    {
+                        "user": "/api/user/2",
+                        "comment": "api/user/passengers/2/comments/2"
+                    },
+                    "MORE"
                 ]
             }
         },
         "MORE"
-    ], 
+    ],
     "users": {
         "drivers": [
             {
@@ -119,7 +122,6 @@
                 "jeepney": "/api/jeepney/2"
             },
             "MORE"
-            
         ],
         "passengers": [
             {
@@ -130,7 +132,6 @@
                     "blah blah blah",
                     "luh luh luh"
                 ]
-
             },
             {
                 "id": 2,
@@ -140,7 +141,6 @@
                     "bleh bleh bleh",
                     "duh duh duh"
                 ]
-
             },
             "MORE"
         ]

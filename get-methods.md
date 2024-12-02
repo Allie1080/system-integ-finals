@@ -252,7 +252,7 @@
 
             /api/jeepneys/1
 
-- *422 - VALIDATION ERROR*
+- ### *404 - NOT FOUND*
     - *if CITY NOT FOUND*
 
 

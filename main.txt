@@ -1,0 +1,301 @@
+
+PasaHERO
+
+Plural
+
+
+General Information
+
+GET HEAD POST PUT
+
+Locations/routes
+Jeepneys/drivers/id/name
+Jeepneys/drivers/id→
+Jeepneys/drivers/name
+
+routes = {
+Name: “Lucena”,
+Id: 
+distance:
+fare:
+time:
+landmarks: list
+jeepneys: [
+	API/jeepneys/id/1,
+	API/jeepneys/id/2
+]
+
+
+
+
+
+Driver Side
+User Side
+
+
+
+
+Features
+
+Payload?
+
+How to actually use the API?
+
+
+
+---------------------------------
+
+---------------------------------
+
+ENDPOINTS:
+
+COLLECTION - /api
+
+COLLECTION - /api/locations
+RESOURCE   - /api/locations/1
+COLLECTION - /api/locations/1/routes
+RESOURCE   - /api/locations/1/routes/1
+COLLECTION - /api/locations/1/routes/1/jeepneys 
+RESOURCE   - /api/locations/1/routes/1/jeepneys/1
+
+COLLECTION - /api/jeepneys
+RESOURCES  - /api/jeepneys/1
+
+COLLECTION - /api/users
+COLLECTION - /api/users/passengers
+RESOURCE   - /api/users/passengers/1
+COLLECTION - /api/users/drivers
+RESOURCE   - /api/users/drivers/1
+
+---------------------------------
+
+METHODS:
+
+HEAD (every collection)
+GET (every collection and resource)
+POST (every collection except /api)
+PUT (every resource)
+PATCH (landmarks, jeepney.status, word cloud, comments)
+DELETE (list of links to drivers, comments)
+
+---------------------------------
+
+JSONs:
+
+/api
+
+
+/api/locations - 
+    {
+        "id": 1,
+        "name": "Lucena",
+        "routes": [
+            {
+                "id": 1,
+                "name": "Lucena City Proper - Site",
+                "distance": 4,
+                "fare": [
+                    {
+                        "type": "Full",
+                        "amount": 13
+                    },
+                    {
+                        "type": "Discounted",
+                        "amount": 11
+                    }
+                ],
+                "operating-hours": [
+                    530,
+                    2100
+                ],
+                "time": 30,
+                "terminals": [
+                    "Enverga University, Gate 3",
+                    "C.M Recto St."
+                ],
+                "landmarks": [
+                    "Moscow St",
+                    "Enverga University",
+                    "Enverga Gymnasium",
+                    "Alfamart Ibabang Dupay",
+                    "SM City Lucena",
+                    "Saint Anne General Hospital",
+                    "STI College",
+                    "New Lucena City Public Market"
+                ],
+                "jeepneys": [
+                    "/api/jeepneys/1",
+                    "/api/jeepneys/2",
+                    "/api/jeepneys/3",
+                    "/api/jeepneys/4",
+                    ...
+                ]
+            },
+            ...
+        ]
+    }
+
+/api/locations/1/routes
+    {
+        "id": 1,
+        "name": "Lucena City Proper - Site",
+        "distance": 4,
+        "fare" : [
+            {
+                "type": "Full",
+                "amount": 13
+            }
+            {
+                "type": "Discounted",
+                "amount": 11
+            }
+        ],   
+        "operating-hours": [
+            530,
+            2100
+        ],
+        "time" : 30,
+        "terminals": [
+            "Enverga University, Gate 3",
+            "C.M Recto St."
+        ],
+        "landmarks": [
+            "Moscow St",
+            "Enverga University",
+            "Enverga Gymnasium",
+            "Alfamart Ibabang Dupay",
+            "SM City Lucena",
+            "Saint Anne General Hospital",
+            "STI College",
+            "New Lucena City Public Market"
+        ],
+        "jeepneys": [
+            "/api/jeepneys/1",
+            "/api/jeepneys/2",
+            "/api/jeepneys/3",
+            "/api/jeepneys/4",
+            ...
+        ]       
+    }
+    
+/api/locations/1/routes/1/jeepneys -> list of redirect to api/jeepneys
+[
+    "",
+]
+GET - application/json?
+PATCH - application/json
+
+/api/locations/1/routes/1/jeepneys/1 -> redirect to api/jeepneys
+GET - text/plain
+DELETE
+
+
+/api/jeepneys
+    [
+        
+    ]
+
+/api/jeepneys/1
+    {
+        "id": 1,
+        "driver": api/users/drivers/1
+        "route": "/api/locations/1/routes/1",
+        "plate-number": "OWO-UWU",
+        "date-registered": "",
+        "type": "traditional",
+        "status": "unavailable",
+        "reviews": {
+            "word-cloud": {
+                    "not good": 34,
+                    "very cramped": 12
+                },
+            "sentences": [
+                    {
+                        "user": "/api/user/1",
+                        "comment": "blah blah blah",
+                    },
+                    {
+                        "user": "/api/user/2",
+                        "comment": "blah blah blah"
+                    }
+            ],
+            ...
+        }
+    }
+
+/api/jeepneys/1/drivers -> redirect to /api/users/drivers
+
+
+/api/users
+    {
+        "drivers": [
+
+        ],
+        "passengers": [
+            
+        ]
+    }
+    
+/api/users/drivers
+    {
+        "id": 1,
+        "name": ""
+
+    }
+
+/api/users/passengers 
+    {
+        "id": 1,
+        "username": "",
+        "name": ""
+    }
+
+
+---------------------------------
+Jeepneys:
+id
+
+plate number
+date registered
+permit(?) franchise(?)
+type: Modern jeep? Trad jeep
+
+
+
+route
+driver
+
+plate number
+
+
+
+Passengers:
+
+
+Drivers:
+
+jeepney (redirect?) 
+jeepney-active (aka on duty) (Maybe sa jeep nalang than driver?)
+
+plate number
+
+Both:
+username
+id
+
+last online / online
+account joined/ member since
+comments
+
+
+
+
+
+
+→locations/routes/jeepneys/bleh
+
+
+
+→users/drivers/bleh
+→users/passengers/bleh
+→locations/routes/jeepneys/bleh

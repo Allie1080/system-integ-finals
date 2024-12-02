@@ -244,18 +244,15 @@
     - *if ROUTE NOT FOUND*
 
 
-## GET - api/cities/1/routes/1/jeepneys/1
+># GET - api/cities/1/routes/1/jeepneys/1
 
-> ### Content-type: 
-- *text/plain*
+> ## RESPONSES: 
+- ### *200 - SUCCESSFUL RESPONSE*
+    - *text/plain* sample
 
-> ### RESPONSES: 
-- ***200 - SUCCESSFUL RESPONSE***
-    - *TXT*
+            /api/jeepneys/1
 
-
-
-- ***422 - VALIDATION ERROR***
+- *422 - VALIDATION ERROR*
     - *if CITY NOT FOUND*
 
 

@@ -1,0 +1,87 @@
+{
+    "locations": {
+        "id": 1,
+        "name": "Lucena",
+        "routes": [
+            {
+                "id": 1,
+                "name": "Lucena City Proper - Site",
+                "distance": 4,
+                "fare": [
+                    {
+                        "type": "Full",
+                        "amount": 13
+                    },
+                    {
+                        "type": "Discounted",
+                        "amount": 11
+                    }
+                ],
+                "operating-hours": [
+                    530,
+                    2100
+                ],
+                "time": 30,
+                "terminals": [
+                    "Enverga University, Gate 3",
+                    "C.M Recto St."
+                ],
+                "landmarks": [
+                    "Moscow St",
+                    "Enverga University",
+                    "Enverga Gymnasium",
+                    "Alfamart Ibabang Dupay",
+                    "SM City Lucena",
+                    "Saint Anne General Hospital",
+                    "STI College",
+                    "New Lucena City Public Market"
+                ],
+                "jeepneys": [
+                    "/api/jeepneys/1",
+                    "/api/jeepneys/2",
+                    "/api/jeepneys/3",
+                    "/api/jeepneys/4",
+                    ...
+                ]
+            },
+            ...
+        ]
+    }, 
+    "jeepneys": [
+        {
+            "id": 1,
+            "driver": "api/users/drivers/1",
+            "route": "/api/locations/1/routes/1",
+            "plate-number": "OWO-UWU",
+            "date-registered": "",
+            "type": "traditional",
+            "status": "unavailable",
+            "reviews": {
+                "word-cloud": {
+                        "not good": 34,
+                        "very cramped": 12
+                    },
+                "sentences": [
+                        {
+                            "user": "/api/user/1",
+                            "comment": "blah blah blah",
+                        },
+                        {
+                            "user": "/api/user/2",
+                            "comment": "blah blah blah"
+                        },
+                        ...
+                ]
+            }
+        },
+        ...
+    ], 
+    "users": {
+        "drivers": [
+
+        ],
+        "passengers": [
+            
+        ]
+    }
+}

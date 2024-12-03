@@ -1,0 +1,142 @@
+<data>
+<cities>
+    <city>
+        <id>1</id>
+        <name>Lucena</name>
+        <routes>
+            <route>
+                <id>1</id>
+                <name>Lucena City Proper - Site</name>
+                <city>/api/cities/1</city>
+                <fare>
+                    <fare>
+                        <type>Full</type>
+                        <amount>13</amount>
+                    </fare>
+                    <fare>
+                        <type>Discounted</type>
+                        <amount>11</amount>
+                    </fare>
+                </fare>
+    
+                <operating-hours>
+                    <operating-hour>530</operating-hour>
+                    </operating-hour>2100</operating-hour>
+                </operating-hours>
+                <landmarks>
+                    <landmark>Moscow St</landmark>
+                    <landmark>Enverga University</landmark>
+                    <landmark>Enverga Gymnasium</landmark>
+                    <landmark>Alfamart Ibabang Dupay</landmark>
+                    <landmark>SM City Lucena</landmark>
+                    <landmark>Saint Anne General Hospital</landmark>
+                    <landmark>"STI College</landmark>
+                    <landmark>New Lucena City Public Market</landmark>
+                </landmarks>
+                <jeepneys>
+                    <jeep>/api/jeepneys/1</jeep>
+                    <jeep>/api/jeepneys/2</jeep>
+                    <jeep>/api/jeepneys/3</jeep>
+                    <jeep>/api/jeepneys/4</jeep>
+                    <more></more>
+                </jeepneys>
+            </route>
+            <more></more>
+        </routes>
+        <more></more>
+    </city>
+</cities>
+<jeepneys>
+    <jeep>
+        <id>1</id>
+        <driver>api/users/drivers/1</driver>
+        <route>/api/cities/1/routes/1</route>
+        <plate-number>OWO-UWU</plate-number>
+        <date-registered></date-registered>
+        <type>traditional</type>
+        <status>unavailable</status>
+        <reviews>
+            <word-cloud>
+                <not-good>34</not-good>
+                <very-cramped>12</very-cramped>
+                <more>-1</more>
+            </word-cloud>
+            <sentences>
+                <sentence>
+                    <user>/api/user/passengers/1</user>
+                    <comment>api/user/passengers/1/comments/1</comment>
+                </sentence>
+                <sentence>
+                    <user>/api/user/2</user>
+                    <comment>api/user/passengers/2/comments/1</comment>
+                </sentence>
+                <more></more>
+            </sentences>
+        </reviews>
+    </jeep>
+    <jeep>
+        <id>2</id>
+        <driver>api/users/drivers/2</driver>
+        <route>api/cities/1/routes/1</route>
+        <plate-number>UWU-OWO</plate-number>
+        <date-registered></date-registered>
+        <type>modern</type>
+        <status>available</status>
+        <reviews>
+            <word-cloud>
+                <too-cold>13</too-cold>
+                <spacious>19</spacious>
+                <scary-fast>5</scary-fast>
+                <more>-1</more>
+            </word-cloud>
+            <sentences>
+                <sentence>
+                    <user>/api/user/passengers/1</user>
+                    <comment>api/user/passengers/1/comments/2</comment>
+                </sentence>
+                <sentence>
+                    <user>/api/user/2</user>
+                    <comment>api/user/passengers/2/comments/2</comment>
+                </sentence>
+                <more></more>
+            </sentences>
+        </reviews>
+    </jeep>
+</jeepneys>
+<users>
+    <drivers>
+        <driver>
+            <id>1</id>
+            <name></name>
+            <jeepney>/api/jeepney/1</jeepney>
+        </driver>
+        <driver>
+            <id>2</id>
+            <name></name>
+            <jeepney>/api/jeepney/2</jeepney>
+        </driver>
+        <more></more>
+    </drivers>
+    <passengers>
+        <passenger>
+            <id>1</id>
+            <name>Zildjian Benitez</name>
+            <username></username>
+            <comments>
+                <comment>blah blah blah</comment>
+                <comment>luh luh luh</comment>
+            </comments>
+        </passenger>
+        <passenger>
+            <id>2</id>
+            <name>Blaster Silonga</name>
+            <username></username>
+            <comments>
+                <comment>bleh bleh bleh</comment>
+                <comment>duh duh duh</comment>
+            </comments>
+        </passenger>
+        <more></more>
+    </passengers>
+</users>
+</data>

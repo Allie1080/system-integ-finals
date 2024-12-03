@@ -1,0 +1,29 @@
+{
+    "id": 0,
+    "name": "string",
+    "city": "redirect link to /api/cities/{city_name}",
+    "distance": 0,
+    "fare": [
+        {
+            "type": "Full",
+            "amount": 0.0
+        },
+        {
+            "type": "Discounted",
+            "amount": 0.0
+        }
+    ],
+    "operating-hours": [
+        0
+    ],
+    "time": 0,
+    "terminals": [
+        "string"
+    ],
+    "landmarks": [
+        "string"
+    ],
+    "jeepneys": [
+        "redirect link to /api/jeepneys/{jeepney_id}"
+    ]
+}

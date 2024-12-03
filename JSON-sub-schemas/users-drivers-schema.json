@@ -1,0 +1,5 @@
+{
+    "id": 0,
+    "name": "string",
+    "jeepney": "redirect link to /api/jeepneys/{jeepney_id}"
+}

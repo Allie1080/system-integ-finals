@@ -1,0 +1,17 @@
+{
+    "id": 0,
+    "driver": "redirect link to api/users/drivers/{driver_id}",
+    "route": "redirect link to /api/cities/{city_name}/routes/{route_id}",
+    "plate-number": "string",
+    "date-registered": "string",
+    "type": "string",
+    "status": "string",
+    "reviews": {
+        "word-cloud": {
+            "string": 0
+        },
+        "sentences": [
+            "users-passengers-comments-sentences-schema object"
+        ]
+    }
+}

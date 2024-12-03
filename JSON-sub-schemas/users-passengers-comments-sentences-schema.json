@@ -1,0 +1,4 @@
+{
+    "user": "redirect link to /api/users/passengers/{passenger_id}",
+    "comment": "redirect link to /api/users/passengers/{passenger_id}/comments/{comment_index}"
+}

@@ -198,7 +198,7 @@
 
 
 
-- ### *404 NOT FOUND*
+- ### *404 - NOT FOUND*
     - *if CITY NOT FOUND*
 
 
@@ -236,7 +236,7 @@
 
 
 
-- ### *404 NOT FOUND*
+- ### *404 - NOT FOUND*
     - *if CITY NOT FOUND*
 
 

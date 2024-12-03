@@ -34,10 +34,10 @@
                     <landmark>New Lucena City Public Market</landmark>
                 </landmarks>
                 <jeepneys>
-                    <jeep>/api/jeepneys/1</jeep>
-                    <jeep>/api/jeepneys/2</jeep>
-                    <jeep>/api/jeepneys/3</jeep>
-                    <jeep>/api/jeepneys/4</jeep>
+                    <jeepney>/api/jeepneys/1</jeepney>
+                    <jeepney>/api/jeepneys/2</jeepney>
+                    <jeepney>/api/jeepneys/3</jeepney>
+                    <jeepney>/api/jeepneys/4</jeepney>
                     <more></more>
                 </jeepneys>
             </route>
@@ -47,7 +47,7 @@
     </city>
 </cities>
 <jeepneys>
-    <jeep>
+    <jeepney>
         <id>1</id>
         <driver>api/users/drivers/1</driver>
         <route>/api/cities/1/routes/1</route>
@@ -73,8 +73,8 @@
                 <more></more>
             </sentences>
         </reviews>
-    </jeep>
-    <jeep>
+    </jeepney>
+    <jeepney>
         <id>2</id>
         <driver>api/users/drivers/2</driver>
         <route>api/cities/1/routes/1</route>
@@ -101,7 +101,7 @@
                 <more></more>
             </sentences>
         </reviews>
-    </jeep>
+    </jeepney>
 </jeepneys>
 <users>
     <drivers>

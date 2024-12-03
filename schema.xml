@@ -1,0 +1,82 @@
+<data>
+<cities>
+    <city>
+        <id>0</id>
+        <name>string</name>
+        <routes>
+            <route>
+                <id>0</id>
+                <name>string</name>
+                <city>redirect link to /api/cities/{city_name}</city>
+                <distance>0</distance>
+                <fare>
+                    <fare>
+                        <type>Full</type>
+                        <amount>0.0</amount>
+                    </fare>
+                    <fare>
+                        <type>Discounted</type>
+                        <amount>0.0</amount>
+                    </fare>
+                </fare>
+                <operating-hours>
+                    <operating-hour>0</operating-hour>
+                </operating-hours>
+                <time>0</time>
+                <terminals>
+                    <terminal>string</terminal>
+                </terminals>
+                <landmarks>
+                    <landmark>string</landmark>
+                </landmarks>
+                <jeepneys>
+                    <jeepney>redirect link to /api/jeepneys/{jeepney_id}</jeepney>
+                </jeepneys>
+
+
+            </route>
+        </routes>
+    </city>
+</cities>
+<jeepneys>
+    <jeepney>
+        <id>0</id>
+        <driver>redirect link to api/users/drivers/{driver_id}</driver>
+        <route>redirect link to /api/cities/{city_name}/routes/{route_id}</route>
+        <plate-number>string</plate-number>
+        <date-registered>string</date-registered>
+        <type>string</type>
+        <status>string</status>
+        <reviews>
+            <word-cloud>
+                <string>0</string>
+            </word-cloud>
+            <sentences>
+                <sentence>
+                    <user>redirect link to /api/users/passengers/{passenger_id}</user>
+                    <comment>redirect link to /api/users/passengers/{passenger_id}/comments/{comment_index}</comment>
+                </sentence>
+            </sentences>
+        </reviews>
+    </jeepney>
+</jeepneys>
+<users>
+    <drivers>
+        <driver>
+            <id>0</id>
+            <name>string</name>
+            <jeepney>redirect link to /api/jeepneys/{jeepney_id}</jeepney>
+        </driver>
+    </drivers>
+    <passengers>
+        <passenger>
+            <id>0</id>
+            <name>string</name>
+            <username>string</username>
+            <comments>
+                <comment>string</comment>
+            </comments>
+        </passenger>
+    </passengers>
+</users>
+</data>

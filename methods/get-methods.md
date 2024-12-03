@@ -182,7 +182,6 @@
 
 
 - ### *404 - NOT FOUND ERROR*
-    - *application/json* template
 
 
 

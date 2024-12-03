@@ -76,6 +76,36 @@
 
 
 
+> # POST - /api/cities/{city_name}/routes/{route_id}/jeepneys
+
+## Request Body Schemas:
+- *text/plain*:
+        
+        /api/jeepneys/{jeepney_id}
+
+
+
+## Responses:
+- ### *200 - SUCCESSFUL RESPONSE*
+    - *text/plain* sample:
+
+
+
+- ### *400 - BAD REQUEST*
+
+
+
+
+- ### *404 - NOT FOUND*
+    - *if CITY NOT FOUND*
+
+
+
+
+    - *if ROUTE NOT FOUND*
+
+
+
 
 > # POST - /api/jeepneys
 
@@ -109,7 +139,7 @@
 - ### *200 - SUCCESSFUL RESPONSE*
     - *application/json* sample
 
-    
+
 
 
     - *application/xml* sample
@@ -117,10 +147,74 @@
 
 
 - ### *400 - BAD REQUEST*
+    
+
+
+
+> # POST - /api/users/drivers
+
+## Request Body Schemas:
+- *application/json*:
+
+        {
+            "id": 0,
+            "name": "string",
+            "jeepney": "redirect link to /api/jeepneys/{jeepney_id}"
+        }   
+
+- *application/xml*:
+
+
+
+
+## Responses:
+- ### *200 - SUCCESSFUL RESPONSE*
     - *application/json* sample
 
 
+
+
     - *application/xml* sample
+
+
+
+- ### *400 - BAD REQUEST*
+
+
+
+> # POST - /api/users/passengers
+
+## Request Body Schemas:
+- *application/json*:
+
+        {
+            "id": 0,
+            "name": "string",
+            "username": "string",
+            "comments": [
+                "string"
+            ]
+        }
+
+- *application/xml*:
+
+
+
+## Responses:
+- ### *200 - SUCCESSFUL RESPONSE*
+    - *application/json* sample
+
+
+
+
+    - *application/xml* sample
+
+
+
+- ### *400 - BAD REQUEST*
+
+
+
 
 
 

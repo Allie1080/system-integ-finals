@@ -968,6 +968,235 @@
                 </response>
 
 
+
+> # GET - /api/jeepneys
+
+## Responses: 
+- ### *200 - SUCCESSFUL RESPONSE*
+    - *application/json* sample:
+
+            {
+                "status-code": 200,
+                "details": "Successfully found",
+                "content": [
+                    {
+                        "id": 1,
+                        "driver": "api/users/drivers/1",
+                        "route": "/api/cities/1/routes/1",
+                        "plate-number": "OWO-UWU",
+                        "date-registered": "",
+                        "type": "traditional",
+                        "status": "unavailable",
+                        "reviews": {
+                            "word-cloud": {
+                                "not good": 34,
+                                "very cramped": 12,
+                                "MORE": -1
+                            },
+                            "sentences": [
+                                {
+                                    "user": "/api/user/passengers/1",
+                                    "comment": "api/user/passengers/1/comments/1"
+                                },
+                                {
+                                    "user": "/api/user/2",
+                                    "comment": "api/user/passengers/2/comments/1"
+                                },
+                                "MORE"
+                            ]
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "driver": "api/users/drivers/2",
+                        "route": "/api/cities/1/routes/1",
+                        "plate-number": "UWU-OWO",
+                        "date-registered": "",
+                        "type": "modern",
+                        "status": "available",
+                        "reviews": {
+                            "word-cloud": {
+                                "too cold": 13,
+                                "spacious": 19,
+                                "scary fast": 5,
+                                "MORE": -1
+                            },
+                            "sentences": [
+                                {
+                                    "user": "/api/user/passengers/1",
+                                    "comment": "api/user/passengers/1/comments/2"
+                                },
+                                {
+                                    "user": "/api/user/2",
+                                    "comment": "api/user/passengers/2/comments/2"
+                                },
+                                "MORE"
+                            ]
+                        }
+                    },
+                    "MORE"
+                ]
+            }
+
+    - *application/xml* sample:
+
+            <response>
+                <status-code>200</status-code>
+                <details>Successfully found</details>
+                <content>
+                    <jeepneys>
+                        <jeepney>
+                            <id>1</id>
+                            <driver>api/users/drivers/1</driver>
+                            <route>/api/cities/1/routes/1</route>
+                            <plate-number>OWO-UWU</plate-number>
+                            <date-registered></date-registered>
+                            <type>traditional</type>
+                            <status>unavailable</status>
+                            <reviews>
+                                <word-cloud>
+                                    <not-good>34</not-good>
+                                    <very-cramped>12</very-cramped>
+                                    <more>-1</more>
+                                </word-cloud>
+                                <sentences>
+                                    <sentence>
+                                        <user>/api/user/passengers/1</user>
+                                        <comment>api/user/passengers/1/comments/1</comment>
+                                    </sentence>
+                                    <sentence>
+                                        <user>/api/user/2</user>
+                                        <comment>api/user/passengers/2/comments/1</comment>
+                                    </sentence>
+                                    <more></more>
+                                </sentences>
+                            </reviews>
+                        </jeepney>
+                        <jeepney>
+                            <id>2</id>
+                            <driver>api/users/drivers/2</driver>
+                            <route>api/cities/1/routes/1</route>
+                            <plate-number>UWU-OWO</plate-number>
+                            <date-registered></date-registered>
+                            <type>modern</type>
+                            <status>available</status>
+                            <reviews>
+                                <word-cloud>
+                                    <too-cold>13</too-cold>
+                                    <spacious>19</spacious>
+                                    <scary-fast>5</scary-fast>
+                                    <more>-1</more>
+                                </word-cloud>
+                                <sentences>
+                                    <sentence>
+                                        <user>/api/user/passengers/1</user>
+                                        <comment>api/user/passengers/1/comments/2</comment>
+                                    </sentence>
+                                    <sentence>
+                                        <user>/api/user/2</user>
+                                        <comment>api/user/passengers/2/comments/2</comment>
+                                    </sentence>
+                                    <more></more>
+                                </sentences>
+                            </reviews>
+                        </jeepney>
+                    </jeepneys>
+                </content>
+            </response>
+
+> # GET - /api/jeepneys/{jeepney_id}
+
+## Responses: 
+- ### *200 - SUCCESSFUL RESPONSE*
+    - *application/json* sample:
+
+            {
+                "status-code": 200,
+                "details": "Successfully found",
+                "content": {
+                    "id": 1,
+                    "driver": "api/users/drivers/1",
+                    "route": "/api/cities/1/routes/1",
+                    "plate-number": "OWO-UWU",
+                    "date-registered": "",
+                    "type": "traditional",
+                    "status": "unavailable",
+                    "reviews": {
+                        "word-cloud": {
+                            "not good": 34,
+                            "very cramped": 12,
+                            "MORE": -1
+                        },
+                        "sentences": [
+                            {
+                                "user": "/api/user/passengers/1",
+                                "comment": "api/user/passengers/1/comments/1"
+                            },
+                            {
+                                "user": "/api/user/2",
+                                "comment": "api/user/passengers/2/comments/1"
+                            },
+                            "MORE"
+                        ]
+                    }
+                }
+            }
+
+    - *application/xml* sample:
+
+            <response>
+                <status-code>200</status-code>
+                <details>Successfully found</details>
+                <content>
+                    <jeepney>
+                        <id>1</id>
+                        <driver>api/users/drivers/1</driver>
+                        <route>/api/cities/1/routes/1</route>
+                        <plate-number>OWO-UWU</plate-number>
+                        <date-registered></date-registered>
+                        <type>traditional</type>
+                        <status>unavailable</status>
+                        <reviews>
+                            <word-cloud>
+                                <not-good>34</not-good>
+                                <very-cramped>12</very-cramped>
+                                <more>-1</more>
+                            </word-cloud>
+                            <sentences>
+                                <sentence>
+                                    <user>/api/user/passengers/1</user>
+                                    <comment>api/user/passengers/1/comments/1</comment>
+                                </sentence>
+                                <sentence>
+                                    <user>/api/user/2</user>
+                                    <comment>api/user/passengers/2/comments/1</comment>
+                                </sentence>
+                                <more></more>
+                            </sentences>
+                        </reviews>
+                    </jeepney>
+                </content>
+            </response>
+
+- ### *404 - NOT FOUND*
+    - *if JEEPNEY NOT FOUND*
+        - *application/json* sample:
+
+                {
+                    "status-code": 404,
+                    "details": "Jeepney Not Found",
+                    "content": "None"
+                }
+
+        - *application/xml* sample:
+
+                <response>
+                    <status-code>404</status-code>
+                    <details>Jeepney Not Found</details>
+                    <content>None</content>
+                </response>
+
+
 > # GET - /api/users
 
 > ## RESPONSES: 
@@ -1136,6 +1365,23 @@
                 </content>
             </response>
 
+- ### *404 - NOT FOUND*
+    - *if DRIVER NOT FOUND*
+        - *application/json* sample:
+
+                {
+                    "status-code": 404,
+                    "details": "Driver Not Found",
+                    "content": "None"
+                }
+
+        - *application/xml* sample:
+
+                <response>
+                    <status-code>404</status-code>
+                    <details>Driver Not Found</details>
+                    <content>None</content>
+                </response>
 
 > # GET - /api/users/passengers
 

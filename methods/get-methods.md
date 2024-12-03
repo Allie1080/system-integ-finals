@@ -560,7 +560,7 @@
                     <content>None</content>
                 </response>
 
-> # GET - api/cities/{city_name}/routes
+> # GET - /api/cities/{city_name}/routes
 
 ## Responses: 
 - ### *200 - SUCCESSFUL RESPONSE*
@@ -685,7 +685,7 @@
                     <content>None</content>
                 </response>
 
-> # GET - api/cities/{city_name}/routes/{route_id}
+> # GET - /api/cities/{city_name}/routes/{route_id}
 
 ## Responses: 
 - ### *200 - SUCCESSFUL RESPONSE*
@@ -821,7 +821,7 @@
 
 
 
-> # GET - api/cities/{city_name}/routes/{route_id}/jeepneys
+> # GET - /api/cities/{city_name}/routes/{route_id}/jeepneys
 
 ## Responses: 
 - ### *200 - SUCCESSFUL RESPONSE*
@@ -893,67 +893,27 @@
                 </response>
 
 
-> # GET - api/cities/{city_name}/routes/{route_id}/jeepneys/{jeepney_index}
+> # GET - /api/cities/{city_name}/routes/{route_id}/jeepneys/{jeepney_index}
 
-> # GET - api/users
-
-> ## RESPONSES: 
+## Responses: 
 - ### *200 - SUCCESSFUL RESPONSE*
     - *application/json* sample:
 
             {
                 "status-code": 200,
-                "details": "Successfully created",
-                "content": {
-                    "drivers": [
-                        {
-                            "id": 1,
-                            "name": "Unique Salonga",
-                            "jeepney": "/api/jeepney/1"
-                        },
-                        {
-                            "id": 2,
-                            "name": "Badjao de Castro",
-                            "jeepney": "/api/jeepney/2"
-                        },
-                        "MORE"
-                    ],
-                    "passengers": [
-                        {
-                            "id": 1,
-                            "name": "Zildjian Benitez",
-                            "username": "",
-                            "comments": [
-                                "blah blah blah",
-                                "luh luh luh"
-                            ]
-                        },
-                        {
-                            "id": 2,
-                            "name": "Blaster Silonga",
-                            "username": "",
-                            "comments": [
-                                "bleh bleh bleh",
-                                "duh duh duh"
-                            ]
-                        },
-                        "MORE"
-                    ]
-                }
+                "details": "Successfully found",
+                "content": "/api/jeepneys/1"
             }
+
+
 
     - *application/xml* sample:
 
             <response>
                 <status-code>200</status-code>
-                <details>Succesfully created</details>
-                <content>
-                    
-                </content>
+                <details>Successfully found</details>
+                <content>/api/jeepneys/1</content>
             </response>
-
-
-
 
 - ### *404 - NOT FOUND*
     - *if CITY NOT FOUND*
@@ -995,7 +955,7 @@
 
                 {
                     "status-code": 404,
-                    "details": "Jeepney Out of Index",
+                    "details": "Jeepney Not Found",
                     "content": "None"
                 }
 
@@ -1003,8 +963,295 @@
 
                 <response>
                     <status-code>404</status-code>
-                    <details>Jeepney Out of Index</details>
+                    <details>Jeepney Not Found</details>
                     <content>None</content>
                 </response>
 
+
+> # GET - /api/users
+
+> ## RESPONSES: 
+- ### *200 - SUCCESSFUL RESPONSE*
+    - *application/json* sample:
+
+            {
+                "status-code": 200,
+                "details": "Successfully created",
+                "content": {
+                    "drivers": [
+                        {
+                            "id": 1,
+                            "name": "Unique Salonga",
+                            "jeepney": "/api/jeepney/1"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Badjao de Castro",
+                            "jeepney": "/api/jeepney/2"
+                        },
+                        "MORE"
+                    ],
+                    "passengers": [
+                        {
+                            "id": 1,
+                            "name": "Zildjian Benitez",
+                            "username": "zildbenitez",
+                            "comments": [
+                                "blah blah blah",
+                                "luh luh luh"
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Blaster Silonga",
+                            "username": "blastersilonga",
+                            "comments": [
+                                "bleh bleh bleh",
+                                "duh duh duh"
+                            ]
+                        },
+                        "MORE"
+                    ]
+                }
+            }
+
+    - *application/xml* sample:
+
+            <response>
+                <status-code>200</status-code>
+                <details>Succesfully created</details>
+                <content>
+                    <users>
+                        <drivers>
+                            <driver>
+                                <id>1</id>
+                                <name>Unique Salonga</name>
+                                <jeepney>/api/jeepney/1</jeepney>
+                            </driver>
+                            <driver>
+                                <id>2</id>
+                                <name>Badjao de Castro</name>
+                                <jeepney>/api/jeepney/2</jeepney>
+                            </driver>
+                            <more></more>
+                        </drivers>
+                        <passengers>
+                            <passenger>
+                                <id>1</id>
+                                <name>Zildjian Benitez</name>
+                                <username>zildbenitez</username>
+                                <comments>
+                                    <comment>blah blah blah</comment>
+                                    <comment>luh luh luh</comment>
+                                </comments>
+                            </passenger>
+                            <passenger>
+                                <id>2</id>
+                                <name>Blaster Silonga</name>
+                                <username>blastersilonga</username>
+                                <comments>
+                                    <comment>bleh bleh bleh</comment>
+                                    <comment>duh duh duh</comment>
+                                </comments>
+                            </passenger>
+                            <more></more>
+                        </passengers>
+                    </users>
+                </content>
+            </response>
+
+> # GET - /api/users/drivers
+
+> ## RESPONSES: 
+- ### *200 - SUCCESSFUL RESPONSE*
+    - *application/json* sample:
+
+            {
+                "status-code": 200,
+                "details": "Successfully created",
+                "content": [
+                        {
+                            "id": 1,
+                            "name": "Unique Salonga",
+                            "jeepney": "/api/jeepney/1"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Badjao de Castro",
+                            "jeepney": "/api/jeepney/2"
+                        },
+                        "MORE"
+                    ]
+            }
+
+    - *application/xml* sample:
+
+            <response>
+                <status-code>200</status-code>
+                <details>Succesfully created</details>
+                <content>
+                    <drivers>
+                        <driver>
+                            <id>1</id>
+                            <name>Unique Salonga</name>
+                            <jeepney>/api/jeepney/1</jeepney>
+                        </driver>
+                        <driver>
+                            <id>2</id>
+                            <name>Badjao de Castro</name>
+                            <jeepney>/api/jeepney/2</jeepney>
+                        </driver>
+                        <more></more>
+                    </drivers>
+                </content>
+            </response>
+
+> # GET - /api/users/drivers/{driver_id}
+
+> ## RESPONSES: 
+- ### *200 - SUCCESSFUL RESPONSE*
+    - *application/json* sample:
+
+            {
+                "status-code": 200,
+                "details": "Successfully created",
+                "content": {
+                        "id": 1,
+                        "name": "Unique Salonga",
+                        "jeepney": "/api/jeepney/1"
+                    }
+            }
+
+    - *application/xml* sample:
+
+            <response>
+                <status-code>200</status-code>
+                <details>Succesfully created</details>
+                <content>
+                    <driver>
+                        <id>1</id>
+                        <name>Unique Salonga</name>
+                        <jeepney>/api/jeepney/1</jeepney>
+                    </driver>
+                </content>
+            </response>
+
+
+> # GET - /api/users/passengers
+
+> ## RESPONSES: 
+- ### *200 - SUCCESSFUL RESPONSE*
+    - *application/json* sample:
+
+            {
+                "status-code": 200,
+                "details": "Successfully created",
+                "content": [
+                    {
+                        "id": 1,
+                        "name": "Zildjian Benitez",
+                        "username": "zildbenitez",
+                        "comments": [
+                            "blah blah blah",
+                            "luh luh luh"
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "Blaster Silonga",
+                        "username": "blastersilonga",
+                        "comments": [
+                            "bleh bleh bleh",
+                            "duh duh duh"
+                        ]
+                    },
+                    "MORE"
+                ]
+            }
+
+    - *application/xml* sample:
+
+            <response>
+                <status-code>200</status-code>
+                <details>Succesfully created</details>
+                <content>
+                    <passengers>
+                        <passenger>
+                            <id>1</id>
+                            <name>Zildjian Benitez</name>
+                            <username>zildbenitez</username>
+                            <comments>
+                                <comment>blah blah blah</comment>
+                                <comment>luh luh luh</comment>
+                            </comments>
+                        </passenger>
+                        <passenger>
+                            <id>2</id>
+                            <name>Blaster Silonga</name>
+                            <username>blastersilonga</username>
+                            <comments>
+                                <comment>bleh bleh bleh</comment>
+                                <comment>duh duh duh</comment>
+                            </comments>
+                        </passenger>
+                        <more></more>
+                    </passengers>
+                </content>
+            </response>
+
+> # GET - /api/users/passengers/{pasenger_id}
+
+> ## RESPONSES: 
+- ### *200 - SUCCESSFUL RESPONSE*
+    - *application/json* sample:
+
+            {
+                "status-code": 200,
+                "details": "Successfully created",
+                "content": {
+                    "id": 1,
+                    "name": "Zildjian Benitez",
+                    "username": "zildbenitez",
+                    "comments": [
+                        "blah blah blah",
+                        "luh luh luh"
+                    ]
+                }
+            }
+
+    - *application/xml* sample:
+
+            <response>
+                <status-code>200</status-code>
+                <details>Succesfully created</details>
+                <content>
+                    <passenger>
+                        <id>1</id>
+                        <name>Zildjian Benitez</name>
+                        <username>zildbenitez</username>
+                        <comments>
+                            <comment>blah blah blah</comment>
+                            <comment>luh luh luh</comment>
+                        </comments>
+                    </passenger>
+                </content>
+            </response>
+
+- ### *404 - NOT FOUND*
+    - *if PASSENGER NOT FOUND*
+        - *application/json* sample:
+
+                {
+                    "status-code": 404,
+                    "details": "Passenger Not Found",
+                    "content": "None"
+                }
+
+        - *application/xml* sample:
+
+                <response>
+                    <status-code>404</status-code>
+                    <details>Passenger Not Found</details>
+                    <content>None</content>
+                </response>
 

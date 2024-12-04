@@ -13,14 +13,14 @@
 
 - *application/xml*:
 
-    <city>
-        <id>0</id>
-        <name>string</name>
-        <routes>
-            <route>
-                cities-routes-schema object
-        </routes>
-    </city>
+        <city>
+            <id>0</id>
+            <name>string</name>
+            <routes>
+                <route>
+                    cities-routes-schema object
+            </routes>
+        </city>
 
 
 ## Responses:
@@ -116,6 +116,7 @@
         }
 
 - *application/xml*:
+
         <city>
             <id>0</id>
             <name>string</name>
@@ -471,7 +472,7 @@
 
 ## Responses:
 - ### *200 - SUCCESSFUL RESPONSE*
-    - *text/plain* sample:
+    - *application/json* sample:
 
             {
                 "status-code": 200,
@@ -488,10 +489,10 @@
             </response>
 
 - ### *400 - BAD REQUEST*
-    - *text/plain* sample:
+    - *application/json* sample:
 
             {
-                "status-code": 200,
+                "status-code": 400,
                 "details": "Formatting Error"
                 "content": "/api/jeepneys/1"
             }
@@ -750,65 +751,62 @@
 - ### *200 - SUCCESSFUL RESPONSE*
     - *application/json* sample:
 
-        {
-            "status-code": 200,
-            "details": "Successfully created"
-            "content": {
-                "id": 1,
-                "name": "Unique Salonga",
-                "jeepney": "/api/jeepney/1"
+            {
+                "status-code": 200,
+                "details": "Successfully created"
+                "content": {
+                    "id": 1,
+                    "name": "Unique Salonga",
+                    "jeepney": "/api/jeepney/1"
+                }
             }
-        }
 
     - *application/xml* sample:
             
-        <response>
-            <status-code>200</status-code>
-            <details>Successfully created</details>
-            <content>
-                <driver>
-                    <id>1</id>
-                    <name>Unique Salonga</name>
-                    <jeepney>/api/jeepney/1</jeepney>
-                </driver> 
-            </content>
-        </response>
+            <response>
+                <status-code>200</status-code>
+                <details>Successfully created</details>
+                <content>
+                    <driver>
+                        <id>1</id>
+                        <name>Unique Salonga</name>
+                        <jeepney>/api/jeepney/1</jeepney>
+                    </driver> 
+                </content>
+            </response>
           
 
 - ### *400 - BAD REQUEST*
     - *application/json* sample:
 
-        {
-            "status-code": 400,
-            "details": "Formatting Error"
-            "content": {
-                "id": 1,
-                "name": "Unique Salonga",
-                "jeepney": "/api/jeepney/1"
+            {
+                "status-code": 400,
+                "details": "Formatting Error"
+                "content": {
+                    "id": 1,
+                    "name": "Unique Salonga",
+                    "jeepney": "/api/jeepney/1"
+                }
             }
-        }
 
     - *application/xml* sample:
             
-        <response>
-            <status-code>400</status-code>
-            <details>Formatting Error</details>
-            <content>
-                <driver>
-                    <id>1</id>
-                    <name>Unique Salonga</name>
-                    <jeepney>/api/jeepney/1</jeepney>
-                </driver> 
-            </content>
-        </response>
-          
-
+            <response>
+                <status-code>400</status-code>
+                <details>Formatting Error</details>
+                <content>
+                    <driver>
+                        <id>1</id>
+                        <name>Unique Salonga</name>
+                        <jeepney>/api/jeepney/1</jeepney>
+                    </driver> 
+                </content>
+            </response>
 
 > # POST - /api/users/passengers
 
 ## Request Body Schemas:
 - *application/json*:
-
 
         {
             "id": 0,
@@ -821,6 +819,14 @@
 
 - *application/xml*:
 
+        <passenger>
+            <id>0</id>
+            <name>string</name>
+            <username>string</username>
+            <comments>
+                <comment>string</comment>
+            </comments>
+        </passenger>
 
 
 ## Responses:
@@ -831,13 +837,33 @@
                 "status-code": 200,
                 "details": "Successfully created"
                 "content": {
-                    
+                    "id": 1,
+                    "name": "Zildjian Benitez",
+                    "username": "zildbenitez",
+                    "comments": [
+                        "blah blah blah",
+                        "luh luh luh"
+                    ]    
                 }
             }
 
     - *application/xml* sample:
 
-
+            <response>
+                <status-code>200</status-code>
+                <details>Successfully created</details>
+                <content>
+                    <passenger>
+                        <id>1</id>
+                        <name>Zildjian Benitez</name>
+                        <username>zildbenitez</username>
+                        <comments>
+                            <comment>blah blah blah</comment>
+                            <comment>luh luh luh</comment>
+                        </comments>
+                    </passenger>
+                </content>
+            </response>
 
 - ### *400 - BAD REQUEST*
     - *application/json* sample:
@@ -846,11 +872,33 @@
                 "status-code": 400,
                 "details": "Formatting Error"
                 "content": {
-
+                    "id": 1,
+                    "name": "Zildjian Benitez",
+                    "username": "zildbenitez",
+                    "comments": [
+                        "blah blah blah",
+                        "luh luh luh"
+                    ]
                 }
             }
 
     - *application/xml* sample:
+            
+            <response>
+                <status-code>400</status-code>
+                <details>Formatting Error</details>
+                <content>
+                    <passenger>
+                        <id>1</id>
+                        <name>Zildjian Benitez</name>
+                        <username>zildbenitez</username>
+                        <comments>
+                            <comment>blah blah blah</comment>
+                            <comment>luh luh luh</comment>
+                        </comments>
+                    </passenger>
+                </content>
+            </response>
 
 
 

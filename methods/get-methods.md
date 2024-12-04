@@ -955,7 +955,7 @@
 
                 {
                     "status-code": 404,
-                    "details": "Jeepney Not Found",
+                    "details": "Jeepney Out of Index",
                     "content": "None"
                 }
 
@@ -963,7 +963,7 @@
 
                 <response>
                     <status-code>404</status-code>
-                    <details>Jeepney Not Found</details>
+                    <details>Jeepney Out of Index</details>
                     <content>None</content>
                 </response>
 
@@ -1445,7 +1445,7 @@
                 </content>
             </response>
 
-> # GET - /api/users/passengers/{pasenger_id}
+> # GET - /api/users/passengers/{passenger_id}
 
 > ## RESPONSES: 
 - ### *200 - SUCCESSFUL RESPONSE*

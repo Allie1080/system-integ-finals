@@ -1,0 +1,5 @@
+<data>
+    <id>0</id>
+    <name>string</name>
+    <jeepney>redirect link to /api/jeepneys/{jeepney_id}</jeepney>
+</data>

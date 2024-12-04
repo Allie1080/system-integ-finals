@@ -1,0 +1,17 @@
+<data>
+    <id>0</id>
+    <driver>redirect link to api/users/drivers/{driver_id}</driver>
+    <route>redirect link to /api/cities/{city_name}/routes/{route_id}</route>
+    <plate-number>string</plate-number>
+    <date-registered>string</date-registered>
+    <type>string</type>
+    <status>string</status>
+    <reviews>
+        <word-cloud>
+            <string>0</string>
+        </word-cloud>
+        <sentences>
+            users-passengers-comments-sentences-schema object
+        </sentences>
+    </reviews>
+</data>

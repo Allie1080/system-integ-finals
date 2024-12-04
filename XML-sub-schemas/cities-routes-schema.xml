@@ -1,4 +1,4 @@
-<data>
+<route>
     <id>0</id>
     <name>string</name>
     <city>redirect link to /api/cities/{city_name}</city>
@@ -26,4 +26,4 @@
     <jeepneys>
         <jeepney>redirect link to /api/jeepneys/{jeepney_id}</jeepney>
     </jeepneys>
-</data>
+</route>

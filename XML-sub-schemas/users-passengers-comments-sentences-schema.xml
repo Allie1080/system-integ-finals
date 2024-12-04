@@ -1,4 +1,4 @@
-<data>
+<sentence>
     <user>redirect link to /api/users/passengers/{passenger_id}</user>
     <comment>redirect link to /api/users/passengers/{passenger_id}/comments/{comment_index}</comment>
-</data>
+</sentence>

@@ -1,4 +1,4 @@
-<data>
+<jeepney>
     <id>0</id>
     <driver>redirect link to api/users/drivers/{driver_id}</driver>
     <route>redirect link to /api/cities/{city_name}/routes/{route_id}</route>
@@ -14,4 +14,4 @@
             users-passengers-comments-sentences-schema object
         </sentences>
     </reviews>
-</data>
+</jeepney>

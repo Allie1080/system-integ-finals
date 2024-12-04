@@ -207,8 +207,8 @@
                                 </route>
                                 <more></more>
                             </routes>
-                            <more></more>
                         </city>
+                        <more></more>
                     </cities>
                     <jeepneys>
                         <jeepney>
@@ -419,8 +419,8 @@
                                 </route>
                                 <more></more>
                             </routes>
-                            <more></more>
                         </city>
+                        <more></more>
                     </cities>
                 </content>
             </response>

@@ -13,6 +13,14 @@
 
 - *application/xml*:
 
+    <city>
+        <id>0</id>
+        <name>string</name>
+        <routes>
+            <route>
+                cities-routes-schema object
+        </routes>
+    </city>
 
 
 ## Responses:
@@ -31,11 +39,20 @@
 
     - *application/xml* sample:
 
-
-
+            <response>
+                <status-code>200</status-code>
+                <details>Successfully created</details>
+                <content> 
+                    <city>
+                        <id>1</id>
+                        <name>Lucena</name>
+                        <routes></routes>
+                    </city>
+                </content>
+            </response>
 
 - ### *400 - BAD REQUEST*
-    - *application/json* sample
+    - *application/json* sample:
 
             {
                 "status-code": 400,
@@ -47,9 +64,19 @@
                 }
             }
 
+    - *application/xml* sample:
 
-
-    - *application/xml* sample
+            <response>
+                <status-code>400</status-code>
+                <details>Formatting Error</details>
+                <content> 
+                    <city>
+                        <id>1</id>
+                        <name>Lucena</name>
+                        <routes></routes>
+                    </city>
+                </content>
+            </response>
 
 
 

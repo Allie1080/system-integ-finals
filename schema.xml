@@ -32,8 +32,6 @@
                 <jeepneys>
                     <jeepney>redirect link to /api/jeepneys/{jeepney_id}</jeepney>
                 </jeepneys>
-
-
             </route>
         </routes>
     </city>

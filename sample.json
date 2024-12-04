@@ -113,12 +113,12 @@
         "drivers": [
             {
                 "id": 1,
-                "name": "",
+                "name": "Unique Salonga",
                 "jeepney": "/api/jeepney/1"
             },
             {
                 "id": 2,
-                "name": "",
+                "name": "Badjao de Castro",
                 "jeepney": "/api/jeepney/2"
             },
             "MORE"
@@ -127,7 +127,7 @@
             {
                 "id": 1,
                 "name": "Zildjian Benitez",
-                "username": "",
+                "username": "zildbenitez",
                 "comments": [
                     "blah blah blah",
                     "luh luh luh"
@@ -136,7 +136,7 @@
             {
                 "id": 2,
                 "name": "Blaster Silonga",
-                "username": "",
+                "username": "blastersilonga",
                 "comments": [
                     "bleh bleh bleh",
                     "duh duh duh"

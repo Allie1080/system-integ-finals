@@ -79,64 +79,109 @@
         </passenger>
     </passengers>
 </users>
-</data><data>
+</data>
+=======
+<data>
 <cities>
     <city>
-        <id>0</id>
-        <name>string</name>
+        <id>1</id>
+        <name>Lucena</name>
         <routes>
             <route>
-                <id>0</id>
-                <name>string</name>
-                <city>redirect link to /api/cities/{city_name}</city>
-                <distance>0</distance>
+                <id>1</id>
+                <name>Lucena City Proper - Site</name>
+                <city>/api/cities/1</city>
                 <fare>
                     <fare>
                         <type>Full</type>
-                        <amount>0.0</amount>
+                        <amount>13</amount>
                     </fare>
                     <fare>
                         <type>Discounted</type>
-                        <amount>0.0</amount>
+                        <amount>11</amount>
                     </fare>
                 </fare>
+    
                 <operating-hours>
-                    <operating-hour>0</operating-hour>
+                    <operating-hour>530</operating-hour>
+                    </operating-hours>2100</operating-hour>
                 </operating-hours>
-                <time>0</time>
-                <terminals>
-                    <terminal>string</terminal>
-                </terminals>
                 <landmarks>
-                    <landmark>string</landmark>
+                    <landmark>Moscow St</landmark>
+                    <landmark>Enverga University</landmark>
+                    <landmark>Enverga Gymnasium</landmark>
+                    <landmark>Alfamart Ibabang Dupay</landmark>
+                    <landmark>SM City Lucena</landmark>
+                    <landmark>Saint Anne General Hospital</landmark>
+                    <landmark>"STI College</landmark>
+                    <landmark>New Lucena City Public Market</landmark>
                 </landmarks>
                 <jeepneys>
-                    <jeepney>redirect link to /api/jeepneys/{jeepney_id}</jeepney>
+                    <jeepney>/api/jeepneys/1</jeepney>
+                    <jeepney>/api/jeepneys/2</jeepney>
+                    <jeepney>/api/jeepneys/3</jeepney>
+                    <jeepney>/api/jeepneys/4</jeepney>
+                    <more></more>
                 </jeepneys>
-
-
             </route>
+            <more></more>
         </routes>
+        <more></more>
     </city>
 </cities>
 <jeepneys>
     <jeepney>
-        <id>0</id>
-        <driver>redirect link to api/users/drivers/{driver_id}</driver>
-        <route>redirect link to /api/cities/{city_name}/routes/{route_id}</route>
-        <plate-number>string</plate-number>
-        <date-registered>string</date-registered>
-        <type>string</type>
-        <status>string</status>
+        <id>1</id>
+        <driver>api/users/drivers/1</driver>
+        <route>/api/cities/1/routes/1</route>
+        <plate-number>OWO-UWU</plate-number>
+        <date-registered></date-registered>
+        <type>traditional</type>
+        <status>unavailable</status>
         <reviews>
             <word-cloud>
-                <string>0</string>
+                <not-good>34</not-good>
+                <very-cramped>12</very-cramped>
+                <more>-1</more>
             </word-cloud>
             <sentences>
                 <sentence>
-                    <user>redirect link to /api/users/passengers/{passenger_id}</user>
-                    <comment>redirect link to /api/users/passengers/{passenger_id}/comments/{comment_index}</comment>
+                    <user>/api/user/passengers/1</user>
+                    <comment>api/user/passengers/1/comments/1</comment>
                 </sentence>
+                <sentence>
+                    <user>/api/user/2</user>
+                    <comment>api/user/passengers/2/comments/1</comment>
+                </sentence>
+                <more></more>
+            </sentences>
+        </reviews>
+    </jeepney>
+    <jeepney>
+        <id>2</id>
+        <driver>api/users/drivers/2</driver>
+        <route>api/cities/1/routes/1</route>
+        <plate-number>UWU-OWO</plate-number>
+        <date-registered></date-registered>
+        <type>modern</type>
+        <status>available</status>
+        <reviews>
+            <word-cloud>
+                <too-cold>13</too-cold>
+                <spacious>19</spacious>
+                <scary-fast>5</scary-fast>
+                <more>-1</more>
+            </word-cloud>
+            <sentences>
+                <sentence>
+                    <user>/api/user/passengers/1</user>
+                    <comment>api/user/passengers/1/comments/2</comment>
+                </sentence>
+                <sentence>
+                    <user>/api/user/2</user>
+                    <comment>api/user/passengers/2/comments/2</comment>
+                </sentence>
+                <more></more>
             </sentences>
         </reviews>
     </jeepney>
@@ -144,20 +189,37 @@
 <users>
     <drivers>
         <driver>
-            <id>0</id>
-            <name>string</name>
-            <jeepney>redirect link to /api/jeepneys/{jeepney_id}</jeepney>
+            <id>1</id>
+            <name></name>
+            <jeepney>/api/jeepney/1</jeepney>
         </driver>
+        <driver>
+            <id>2</id>
+            <name></name>
+            <jeepney>/api/jeepney/2</jeepney>
+        </driver>
+        <more></more>
     </drivers>
     <passengers>
         <passenger>
-            <id>0</id>
-            <name>string</name>
-            <username>string</username>
+            <id>1</id>
+            <name>Zildjian Benitez</name>
+            <username></username>
             <comments>
-                <comment>string</comment>
+                <comment>blah blah blah</comment>
+                <comment>luh luh luh</comment>
             </comments>
         </passenger>
+        <passenger>
+            <id>2</id>
+            <name>Blaster Silonga</name>
+            <username></username>
+            <comments>
+                <comment>bleh bleh bleh</comment>
+                <comment>duh duh duh</comment>
+            </comments>
+        </passenger>
+        <more></more>
     </passengers>
 </users>
 </data>

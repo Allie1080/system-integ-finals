@@ -18,10 +18,9 @@
                         <amount>11</amount>
                     </fare>
                 </fare>
-    
                 <operating-hours>
                     <operating-hour>530</operating-hour>
-                    </operating-hour>2100</operating-hour>
+                    </operating-hours>2100</operating-hour>
                 </operating-hours>
                 <landmarks>
                     <landmark>Moscow St</landmark>
@@ -43,8 +42,8 @@
             </route>
             <more></more>
         </routes>
-        <more></more>
     </city>
+    <more></more>
 </cities>
 <jeepneys>
     <jeepney>
@@ -107,12 +106,12 @@
     <drivers>
         <driver>
             <id>1</id>
-            <name></name>
+            <name>Unique Salonga</name>
             <jeepney>/api/jeepney/1</jeepney>
         </driver>
         <driver>
             <id>2</id>
-            <name></name>
+            <name>Badjao de Castro</name>
             <jeepney>/api/jeepney/2</jeepney>
         </driver>
         <more></more>
@@ -121,7 +120,7 @@
         <passenger>
             <id>1</id>
             <name>Zildjian Benitez</name>
-            <username></username>
+            <username>zildbenitez</username>
             <comments>
                 <comment>blah blah blah</comment>
                 <comment>luh luh luh</comment>
@@ -130,7 +129,7 @@
         <passenger>
             <id>2</id>
             <name>Blaster Silonga</name>
-            <username></username>
+            <username>blastersilonga</username>
             <comments>
                 <comment>bleh bleh bleh</comment>
                 <comment>duh duh duh</comment>

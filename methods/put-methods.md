@@ -747,22 +747,8 @@
                     "type": "traditional",
                     "status": "unavailable",
                     "reviews": {
-                        "word-cloud": {
-                            "not good": 34,
-                            "very cramped": 12,
-                            "MORE": -1
-                        },
-                        "sentences": [
-                            {
-                                "user": "/api/user/passengers/1",
-                                "comment": "api/user/passengers/1/comments/1"
-                            },
-                            {
-                                "user": "/api/user/2",
-                                "comment": "api/user/passengers/2/comments/1"
-                            },
-                            "MORE"
-                        ]
+                        "word-cloud": {},
+                        "sentences": []
                     }
                 }
             }
@@ -782,22 +768,8 @@
                             <type>traditional</type>
                             <status>unavailable</status>
                             <reviews>
-                                <word-cloud>
-                                    <not-good>34</not-good>
-                                    <very-cramped>12</very-cramped>
-                                    <more>-1</more>
-                                </word-cloud>
-                                <sentences>
-                                    <sentence>
-                                        <user>/api/user/passengers/1</user>
-                                        <comment>api/user/passengers/1/comments/1</comment>
-                                    </sentence>
-                                    <sentence>
-                                        <user>/api/user/2</user>
-                                        <comment>api/user/passengers/2/comments/1</comment>
-                                    </sentence>
-                                    <more></more>
-                                </sentences>
+                                <word-cloud></word-cloud>
+                                <sentences></sentences>
                             </reviews>
                         </jeepney>
                     </content>
@@ -818,22 +790,8 @@
                     "type": "traditional",
                     "status": "unavailable",
                     "reviews": {
-                        "word-cloud": {
-                            "not good": 34,
-                            "very cramped": 12,
-                            "MORE": -1
-                        },
-                        "sentences": [
-                            {
-                                "user": "/api/user/passengers/1",
-                                "comment": "api/user/passengers/1/comments/1"
-                            },
-                            {
-                                "user": "/api/user/2",
-                                "comment": "api/user/passengers/2/comments/1"
-                            },
-                            "MORE"
-                        ]
+                        "word-cloud": {},
+                        "sentences": []
                     }
                 }
             }
@@ -853,22 +811,8 @@
                             <type>traditional</type>
                             <status>unavailable</status>
                             <reviews>
-                                <word-cloud>
-                                    <not-good>34</not-good>
-                                    <very-cramped>12</very-cramped>
-                                    <more>-1</more>
-                                </word-cloud>
-                                <sentences>
-                                    <sentence>
-                                        <user>/api/user/passengers/1</user>
-                                        <comment>api/user/passengers/1/comments/1</comment>
-                                    </sentence>
-                                    <sentence>
-                                        <user>/api/user/2</user>
-                                        <comment>api/user/passengers/2/comments/1</comment>
-                                    </sentence>
-                                    <more></more>
-                                </sentences>
+                                <word-cloud></word-cloud>
+                                <sentences></sentences>
                             </reviews>
                         </jeepney>
                     </content>
